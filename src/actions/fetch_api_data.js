@@ -8,7 +8,8 @@ export function fetchAPIResponse(type, city){
         axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=0614d13377e407e8c0724c47d862443b`).then(response => {
            dispatch({type:"FETCH_CONDITIONS", payload: response.data.main});
            dispatch({type:"FETCH_LOCATION", payload: response.data.coord});
-        }).catch(err=>{
+        }).catch(err => {
+            alert('There was a problem fetching the data, please check the input.')
             console.log(err)
         }) 
         
@@ -23,7 +24,8 @@ export function fetchAPIResponse(type, city){
            let pressure      = targetObjects.map((obj) => obj.main.pressure)
 
            dispatch({type:"FETCH_WEATHER", payload: [days, temperature, humidity, pressure]});
-        }).catch(err=>{
+        }).catch(err => {
+            alert('There was a problem fetching the data, please check the input.')
             console.log(err)
         }) 
    }
