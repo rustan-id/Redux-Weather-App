@@ -6,7 +6,8 @@ export default class Header extends Component {
   render() {
     return (
       <div className="header">
-        <svg className="cloud-svg left" viewBox='0 0 105 105'>
+       <div>
+        <svg className="cloud-svg" viewBox='0 0 105 105'>
           <path className="cloud-path" d='M 25,60 
                                           a 20,20 1 0,0 0,40 
                                           h 50 
@@ -15,7 +16,8 @@ export default class Header extends Component {
                                           a 15,15 1 0,0 -35,10  
                                           z' />
         </svg>
-        <span className="title left">World Weather App</span>
+        <span className="title">World Weather App</span>
+       </div>
        <div onClick={this.props.triggerTransition} className="hamburguer-container">
           <div className="hambuguer-button"></div>
           <div className="hambuguer-button"></div>

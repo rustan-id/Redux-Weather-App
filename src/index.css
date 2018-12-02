@@ -13,6 +13,9 @@ html, body {
   top: 0;
   background-color: #405C78;
   z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .title{
